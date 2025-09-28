@@ -76,25 +76,7 @@ const ViewCard = () => {
     cardDetails?.image3,
   ].filter((img) => img); // Filter out any undefined/null images
 
-  // const deleteListing = async () => {
-  //   setLoading(true);
-  //   try {
-  //     const result = await axios.get(
-  //       serverUrl + `/api/listing/deleteListings/${cardDetails._id}`,
-  //       {
-  //         headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
-  //       }
-  //     );
-  //     if (result.status == 200) {
-  //       toast.success("Listing Deleted Successfully");
-  //       navigate("/");
-  //     }
-  //   } catch (error) {
-  //     console.log(error);
-  //     toast.error("Failed to delete listing");
-  //     setLoading(false);
-  //   }
-  // };
+  
 
   const nextImage = () => {
     setActiveImage((prev) => (prev + 1) % images.length);
@@ -304,27 +286,7 @@ const ViewCard = () => {
                   Book Now
                 </Button>
 
-                {/* {cardDetails?.host == userData?._id && (
-                  <>
-                    <Button
-                      onClick={() => setPopup(true)}
-                      variant="outline"
-                      className="flex items-center gap-2"
-                    >
-                      <Edit size={18} />
-                      Edit
-                    </Button>
-                    <Button
-                      onClick={deleteListing}
-                      variant="outline"
-                      className="text-red-600 border-red-200 hover:bg-red-50 flex items-center gap-2"
-                      disabled={loading}
-                    >
-                      <Trash2 size={18} />
-                      {loading ? "Deleting..." : "Delete"}
-                    </Button>
-                  </>
-                )} */}
+                
               </div>
             </div>
           </div>
