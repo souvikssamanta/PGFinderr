@@ -10,7 +10,7 @@ import { authDataContext } from "../context/AuthContext";
 import { userDataContext } from "../context/UserContext";
 import EditCard from "./EditCard";
 import toast from "react-hot-toast";
-import Booking from "../components/booking";
+import Booking from "../components/Booking";
 import {
   MapPin,
   Star,
