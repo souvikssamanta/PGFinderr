@@ -16,7 +16,7 @@ import {
 import { authDataContext } from "../context/AuthContext.jsx";
 import axios from "axios";
 import { toast } from "react-hot-toast";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { userDataContext } from "../context/UserContext.jsx";
 
 export default function Signup() {
@@ -288,12 +288,12 @@ export default function Signup() {
 
           <div className="mt-6 text-center text-sm text-gray-500">
             Already have an account?{" "}
-            <a
+            <Link
               href="/login"
               className="text-green-600 hover:text-green-800 font-medium transition-colors duration-300"
             >
               Sign in
-            </a>
+            </Link>
           </div>
         </div>
       </div>

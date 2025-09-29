@@ -3,7 +3,7 @@
 
 
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import { authDataContext } from "../context/AuthContext";
 import { toast } from "react-hot-toast";
@@ -196,12 +196,12 @@ export default function Login() {
 
           <div className="mt-6 text-center text-sm text-gray-500">
             Don't have an account?{" "}
-            <a
+            <Link
               href="/signup"
               className="text-green-600 hover:text-green-800 font-medium transition-colors duration-300"
             >
               Create account
-            </a>
+            </Link>
           </div>
 
           {/* Social login options */}
