@@ -1,7 +1,7 @@
 import React, { createContext } from 'react'
 export const authDataContext = createContext();
  const AuthContext = ({children}) => {
-    const serverUrl="http://localhost:4000"
+    const serverUrl = "https://pgfinder-so81.onrender.com";
    const[loading,setLoading]=React.useState(false)
     const value={serverUrl
     ,loading
