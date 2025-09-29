@@ -44,7 +44,7 @@ export default function Signup() {
     e.preventDefault();
     try {
       // Include userType in the form data
-      const submitData = { ...formData, userType };
+      const submitData = { ...formData };
       const result = await axios.post(
         serverUrl + "/api/auth/signup",
         submitData
@@ -126,7 +126,7 @@ export default function Signup() {
           </div>
 
           {/* User type selection */}
-          <div className="mb-6">
+          {/* <div className="mb-6">
             <label className="block mb-2 text-sm font-medium text-gray-700">
               I am a
             </label>
@@ -154,7 +154,7 @@ export default function Signup() {
                 Working Professional
               </button>
             </div>
-          </div>
+          </div> */}
 
           <form onSubmit={handleSubmit} className="space-y-6">
             {/* Name */}
@@ -224,7 +224,7 @@ export default function Signup() {
             </div>
 
             {/* Additional field based on user type */}
-            {userType === "student" && (
+            {/* {userType === "student" && (
               <div>
                 <label className="block mb-2 text-sm font-medium text-gray-700">
                   College/University Name
@@ -235,8 +235,8 @@ export default function Signup() {
                   placeholder="Enter your college name"
                 />
               </div>
-            )}
-
+            )} */}
+{/* 
             {userType === "professional" && (
               <div>
                 <label className="block mb-2 text-sm font-medium text-gray-700">
@@ -248,7 +248,7 @@ export default function Signup() {
                   placeholder="Enter your company name"
                 />
               </div>
-            )}
+            )} */}
 
             {/* Terms */}
             <div className="flex items-start space-x-2 text-sm text-gray-500">
@@ -289,7 +289,7 @@ export default function Signup() {
           <div className="mt-6 text-center text-sm text-gray-500">
             Already have an account?{" "}
             <Link
-              href="/login"
+              to="/login"
               className="text-green-600 hover:text-green-800 font-medium transition-colors duration-300"
             >
               Sign in
