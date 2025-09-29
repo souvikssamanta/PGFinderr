@@ -49,7 +49,7 @@ export default function Login() {
         setLoading(false);
         localStorage.setItem("token", result.data.token);
         toast.success("Login successful!");
-        navigate("/");
+        navigate("/home");
       }
     } catch (error) {
       setLoading(false);

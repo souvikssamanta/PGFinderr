@@ -53,7 +53,7 @@ export default function Signup() {
         setUserData(result.data);
         setLoading(false);
         toast.success("Account created successfully!");
-        navigate("/");
+        navigate("/home");
       }
     } catch (error) {
       console.error("Error during signup:", error);
