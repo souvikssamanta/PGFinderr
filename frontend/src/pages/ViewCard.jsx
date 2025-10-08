@@ -279,7 +279,7 @@ const ViewCard = () => {
               {/* Action Buttons */}
               <div className="flex flex-col sm:flex-row gap-3 pt-4">
                 <Button
-                  disabled={cardDetails.isBooked}
+                  //disabled={cardDetails.isBooked}
                   onClick={() => setBook(true)}
                   className="flex-1 bg-green-600 hover:bg-green-700 h-12 text-lg"
                 >

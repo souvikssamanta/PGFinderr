@@ -5,5 +5,5 @@ import isAuth from "../middleware/isAuth.js";
 const bookingRouter=express.Router();
 
 bookingRouter.post("/create/:id",isAuth, createBooking)
-bookingRouter.post("/cancel/:id", cancelBooking);
+bookingRouter.post("/cancel/:id",isAuth, cancelBooking);
 export default bookingRouter;

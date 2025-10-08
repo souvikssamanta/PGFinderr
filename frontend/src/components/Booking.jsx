@@ -217,7 +217,7 @@ const Booking = ({ cardDetails, setBook }) => {
   // Render hotel booking section (existing code)
   const renderHotelBooking = () => (
     <div
-      className={`max-w-4xl w-full bg-white rounded-xl shadow-2xl overflow-hidden transition-all duration-500 ${
+      className={`max-w-4xl w-full mt-10 bg-white rounded-xl shadow-2xl overflow-hidden transition-all duration-500 ${
         isVisible ? "opacity-100 scale-100" : "opacity-0 scale-95"
       }`}
     >
@@ -229,7 +229,7 @@ const Booking = ({ cardDetails, setBook }) => {
             <Button
               variant="ghost"
               size="icon"
-              onClick={() => setBook(false)}
+              onClick={() =>setBook(false)}
               className="rounded-full hover:bg-gray-200"
             >
               ×

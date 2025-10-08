@@ -74,7 +74,7 @@ const ListingPage1 = () => {
           <Button
             variant="outline"
             size="icon"
-            onClick={() => navigate("/")}
+            onClick={() => navigate("/home")}
             className="rounded-full border-gray-300 hover:border-green-600 hover:text-green-600"
           >
             <ArrowLeft size={20} />

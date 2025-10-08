@@ -1,5 +1,5 @@
 import axios from 'axios'
-import React, { Children, createContext, useContext, useEffect } from 'react'
+import React, { Children, createContext, use, useContext, useEffect } from 'react'
 import { authDataContext } from './AuthContext'
 import { userDataContext } from './UserContext'
 import { listingDataContext } from './ListingContext'
@@ -58,8 +58,7 @@ const cancelBooking=async(id)=>{
       headers:
       {Authorization:`Bearer ${localStorage.getItem("token")}`}
     })
-    await getCurrentUser()
-    await getListings()
+    
     if(result.status==200){
       toast.success("Booking cancelled")
       navigate("/mybookings")

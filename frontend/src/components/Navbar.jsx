@@ -54,16 +54,6 @@ export default function Navbar() {
     }
   };
 
-  // const handleSearch = (e) => {
-  //   e.preventDefault();
-  //   if (search.trim()) {
-  //     navigate(`/search?q=${encodeURIComponent(search.trim())}`);
-  //   }
-  //   serchListing(search);
-  // };
-  // useEffect(() => {
-  //   handleSearch();
-  // },[search])
 
   return (
     <div className="flex flex-col sticky top-0 z-50 bg-transparent border-b shadow-sm">
@@ -198,7 +188,7 @@ export default function Navbar() {
                   <>
                     <SheetClose asChild>
                       <Button
-                        onClick={() => navigate("/mylisting")}
+                        onClick={() => navigate("/mylistings")}
                         variant="outline"
                         className="justify-start"
                       >

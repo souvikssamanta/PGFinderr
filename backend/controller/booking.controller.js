@@ -62,6 +62,7 @@ export const cancelBooking=async(req,res)=>{
     }
 
     const user=await User.findByIdAndUpdate(req.userId,{$pull:{booking:booking._id}},{new:true});
+    console.log(user)
     if(!user){
       return res.status(404).json({message:"User not found"})
     }

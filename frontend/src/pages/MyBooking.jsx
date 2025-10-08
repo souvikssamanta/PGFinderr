@@ -220,7 +220,7 @@ const MyBooking = () => {
                         </div>
 
                         <div className="flex gap-2">
-                          <Button
+                          {/* <Button
                             variant="outline"
                             size="sm"
                             onClick={() =>
@@ -229,7 +229,7 @@ const MyBooking = () => {
                           >
                             <Eye className="mr-2 h-4 w-4" />
                             View Property
-                          </Button>
+                          </Button> */}
 
                           {booking.status === "confirmed" && (
                             <Button

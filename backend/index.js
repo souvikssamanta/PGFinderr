@@ -18,14 +18,11 @@ app.use(cookieParser())
 app.use(express.urlencoded({extended:true}))
 app.use(cors({
      origin:"https://pgfinderr.onrender.com",
-    // origin:"http://localhost:5173",
+     //origin:"http://localhost:5173",
     methods:["GET","POST","PUT","DELETE"],
     credentials:true
 }))
-// app.use((req, res, next) => {
-//   console.log("Cookies received:", req.cookies);
-//   next();
-// });
+
 
 app.use('/api/auth',authRouter)
 app.use('/api/user',userRouter)
