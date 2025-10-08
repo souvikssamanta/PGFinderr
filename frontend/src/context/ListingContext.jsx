@@ -6,7 +6,6 @@ import { useNavigate, useParams } from 'react-router-dom';
 import { use } from 'react';
 import { useEffect } from 'react';
 
-
 export const listingDataContext=createContext()
 const ListingContext = ({children}) => {
   const [title, setTitle] = useState("");
@@ -17,8 +16,8 @@ const ListingContext = ({children}) => {
   const [backendImage1, setBackendImage1] = useState("");
   const [backendImage2, setBackendImage2] = useState("");
   const [backendImage3, setBackendImage3] = useState("");
-  const [rent, setRent] = useState("");
-  const [city, setCity] = useState("");
+  const [rent,setRent] = useState("");
+  const [city,setCity] = useState("");
   const [landmark, setLandmark] = useState("");
   const [category, setCategory] = useState("");
   const [adding, setAdding] = useState(false);
@@ -29,8 +28,8 @@ const ListingContext = ({children}) => {
   const[categoryData,setCategoryData]=useState([])
   const { serverUrl } = useContext(authDataContext);
   const navigate = useNavigate();
-  const { id } = useParams();  
-  const handleAddListing = async () => {
+  const {id} = useParams();  
+  const handleAddListing = async()=>{
     setAdding(true);
     try {
       const formData = new FormData();
@@ -48,7 +47,7 @@ const ListingContext = ({children}) => {
         serverUrl + "/api/listing/add",
         formData,
         {
-          headers: {
+        headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,
           },
         },
@@ -57,7 +56,7 @@ const ListingContext = ({children}) => {
       if (result.status == 201) {
         setAdding(false);
         toast.success("Listing added successfully");
-        navigate("/");
+        navigate("/home");
         setTitle("");
         setDescription("");
         setFrontendImage1("");
@@ -91,12 +90,7 @@ const searchListing=async()=>{
   }
 }
 
-
-
-
-
-
-  const getListings = async () => {
+const getListings = async () => {
     try {
       const result = await axios.get(serverUrl + "/api/listing/getListings", {
         headers: {

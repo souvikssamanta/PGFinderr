@@ -312,7 +312,11 @@ setLandmark("");
               placeholder="Enter nearby landmark"
             />
           </div>
-
+                    <div>
+                      <h1>Change the status</h1>
+                      <option value="available"></option>
+                      <option value="unavailable"></option>
+                    </div>
           {/* Submit Button */}
           <button
           disabled={loading}

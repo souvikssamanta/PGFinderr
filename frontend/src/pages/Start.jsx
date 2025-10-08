@@ -47,14 +47,9 @@ const PGHomePage = () => {
           >
             How It Works
           </a>
-          <a
-            href="#testimonials"
-            className="text-gray-600 hover:text-green-600"
-          >
-            Testimonials
-          </a>
-          <a href="#contact" className="text-gray-600 hover:text-green-600">
-            Contact
+          
+          <a href="#faq" className="text-gray-600 hover:text-green-600">
+            Faq
           </a>
         </div>
 
@@ -295,7 +290,7 @@ const PGHomePage = () => {
 
       {/* CTA Section */}
      
-            <FAQ/>
+            <FAQ />
       {/* Footer */}
       <FooterCard/>
     

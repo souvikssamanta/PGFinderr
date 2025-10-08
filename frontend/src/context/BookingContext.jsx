@@ -39,11 +39,16 @@ if(result.status==201){
   setBookingData(result.data)
   toast.success("Booking successful!Pay now to Confirm! ")
   navigate("/payment")
+  setCheckIn("")
+  setCheckOut("")
+ 
+ 
 }
 
 } catch (error) {
   console.log(error)
   toast.error("Booking failed")
+  navigate("/home")                                                             
 }
 
 }

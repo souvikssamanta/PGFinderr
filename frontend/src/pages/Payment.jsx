@@ -1,7 +1,5 @@
 
 
-
-
 import { authDataContext } from "@/context/AuthContext";
 import { bookingDataContext } from "@/context/BookingContext";
 import React, { useContext, useState } from "react";
@@ -26,16 +24,15 @@ const Payment = () => {
   const { total, bookingData } = useContext(bookingDataContext);
   const { serverUrl } = useContext(authDataContext);
   const navigate = useNavigate();
-
   const id = bookingData?.booking._id;
-  const property = bookingData?.boo;
 
   const initPay = (order) => {
     const options = {
-      key: "rzp_test_wivByQXLsLz38L",
+  
+      key:import.meta.env.VITE_RAZORPAY_KEY_ID,
       amount: order.amount,
       currency: order.currency,
-      name: "NestHub Payments",
+      name:"NestHub Payments",
       order_id: order.id,
       handler: async function (response) {
         console.log("Payment successful", response);
@@ -58,7 +55,7 @@ const Payment = () => {
             state: {
               paymentId: response.razorpay_payment_id,
               amount: total,
-              property: property,
+              
             },
           });
         } else {
@@ -139,34 +136,7 @@ const Payment = () => {
                 <span className="font-mono text-sm text-gray-800">{id}</span>
               </div>
 
-              {/* Property Details */}
-              {property && (
-                <div className="mb-6">
-                  <h3 className="font-semibold text-gray-800 mb-3">
-                    Property Details
-                  </h3>
-                  <div className="flex items-start space-x-3">
-                    <div className="w-16 h-16 rounded-lg overflow-hidden flex-shrink-0">
-                      <img
-                        src={property.image1}
-                        alt={property.title}
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                    <div className="flex-1">
-                      <h4 className="font-medium text-gray-800">
-                        {property.title}
-                      </h4>
-                      <div className="flex items-center text-sm text-gray-600 mt-1">
-                        <MapPin size={14} className="mr-1" />
-                        <span>
-                          {property.landmark}, {property.city}
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              )}
+              
 
               {/* Booking Dates */}
               {bookingData?.booking && (
@@ -201,29 +171,13 @@ const Payment = () => {
                 </div>
               )}
 
-              {/* Price Breakdown */}
-              <div className="space-y-3">
-                <div className="flex justify-between text-gray-700">
-                  <span>Monthly Rent</span>
-                  <span>₹{property?.rent?.toLocaleString()}</span>
-                </div>
-                <div className="flex justify-between text-gray-700">
-                  <span>Platform Fee (10%)</span>
-                  <span>₹{(property?.rent * 0.1).toFixed(2)}</span>
-                </div>
-                <div className="border-t border-gray-300 pt-3 mt-2">
-                  <div className="flex justify-between text-lg font-bold text-green-700">
-                    <span>Total Amount</span>
-                    <span>₹{total?.toFixed(2)}</span>
-                  </div>
-                </div>
-              </div>
+              
             </CardContent>
           </Card>
 
           {/* Payment Section */}
           <Card className="border-0 shadow-lg">
-            <CardContent className="p-6">
+            <CardContent className="p-2">
               <h2 className="text-xl font-semibold text-gray-800 mb-4">
                 Payment Details
               </h2>

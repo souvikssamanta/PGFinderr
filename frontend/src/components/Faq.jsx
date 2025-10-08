@@ -107,7 +107,10 @@ const FAQ = () => {
   };
 
   return (
-    <div className="bg-gradient-to-br from-gray-50 to-blue-50 py-16 px-4 sm:px-6 lg:px-8">
+    <div
+      id="faq"
+      className="bg-gradient-to-br from-gray-50 to-blue-50 py-16 px-4 sm:px-6 lg:px-8"
+    >
       <div className="max-w-6xl mx-auto">
         {/* Header Section */}
         <div className="text-center mb-12">
@@ -212,86 +215,78 @@ const FAQ = () => {
           ))}
         </div>
 
-        {/* Still Have Questions Section */}
-        <div className="mt-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white">
-          <div className="max-w-4xl mx-auto text-center">
-            <h3 className="text-3xl font-bold mb-4">Still have questions?</h3>
-            <p className="text-blue-100 text-lg mb-8">
-              Our support team is here to help you find the perfect
-              accommodation
-            </p>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div className="flex flex-col items-center p-4">
-                <div className="w-12 h-12 bg-white bg-opacity-20 rounded-full flex items-center justify-center mb-3">
-                  <MessageCircle className="w-6 text-black h-6" />
-                </div>
-                <h4 className="font-semibold mb-2">Live Chat</h4>
-                <p className="text-blue-100 text-sm">Instant help 24/7</p>
-                <button className="mt-3 bg-white text-blue-600 px-4 py-2 rounded-lg font-medium hover:bg-gray-100 transition-colors">
-                  Start Chat
-                </button>
-              </div>
-
-              <div className="flex flex-col items-center p-4">
-                <div className="w-12 h-12 bg-white bg-opacity-20 rounded-full flex items-center justify-center mb-3">
-                  <Phone className="w-6 text-black h-6" />
-                </div>
-                <h4 className="font-semibold mb-2">Call Us</h4>
-                <p className="text-blue-100 text-sm">+1 (555) 123-4567</p>
-                <button className="mt-3 bg-white text-blue-600 px-4 py-2 rounded-lg font-medium hover:bg-gray-100 transition-colors">
-                  Call Now
-                </button>
-              </div>
-
-              <div className="flex flex-col items-center p-4">
-                <div className="w-12 h-12 bg-white bg-opacity-20  rounded-full flex items-center justify-center mb-3">
-                  <Mail className="w-6 text-black  h-6" />
-                </div>
-                <h4 className="font-semibold mb-2">Email Us</h4>
-                <p className="text-blue-100 text-sm">support@NestHub.com</p>
-                <button className="mt-3 bg-white text-blue-600 px-4 py-2 rounded-lg font-medium hover:bg-gray-100 transition-colors">
-                  Send Email
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-
         {/* Quick Help Cards */}
+        <p className="mt-5 text-2xl font-semibold ">
+          Some Feedbacks from our customers🤗
+        </p>
         <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 text-center hover:shadow-md transition-shadow">
-            <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-              <span className="text-2xl">📋</span>
+          <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+            <p className="">Some Feedbacks from our customers</p>
+            <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mb-4">
+              <span className="text-2xl">⭐</span>
             </div>
-            <h4 className="font-semibold mb-2">Booking Guide</h4>
-            <p className="text-gray-600 text-sm">
-              Step-by-step booking process
+            <p className="text-gray-600 text-sm mb-4 italic">
+              "The entire process was seamless and professional. Found my
+              perfect apartment within days!"
             </p>
+            <div className="flex items-center">
+              <div className="w-8 h-8 bg-gray-200 rounded-full mr-3"></div>
+              <div>
+                <h4 className="font-semibold text-sm">Sarah Johnson</h4>
+                <p className="text-gray-500 text-xs">New York</p>
+              </div>
+            </div>
           </div>
 
-          <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 text-center hover:shadow-md transition-shadow">
-            <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-              <span className="text-2xl">⚖️</span>
+          <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+            <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mb-4">
+              <span className="text-2xl">⭐</span>
             </div>
-            <h4 className="font-semibold mb-2">Rental Agreement</h4>
-            <p className="text-gray-600 text-sm">Understand your rights</p>
+            <p className="text-gray-600 text-sm mb-4 italic">
+              "Excellent service! The team went above and beyond to help me find
+              exactly what I needed."
+            </p>
+            <div className="flex items-center">
+              <div className="w-8 h-8 bg-gray-200 rounded-full mr-3"></div>
+              <div>
+                <h4 className="font-semibold text-sm">Michael Chen</h4>
+                <p className="text-gray-500 text-xs">Los Angeles</p>
+              </div>
+            </div>
           </div>
 
-          <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 text-center hover:shadow-md transition-shadow">
-            <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-              <span className="text-2xl">💰</span>
+          <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+            <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mb-4">
+              <span className="text-2xl">⭐</span>
             </div>
-            <h4 className="font-semibold mb-2">Payment Security</h4>
-            <p className="text-gray-600 text-sm">Safe transaction process</p>
+            <p className="text-gray-600 text-sm mb-4 italic">
+              "Quick response time and very accommodating. Made my relocation
+              stress-free!"
+            </p>
+            <div className="flex items-center">
+              <div className="w-8 h-8 bg-gray-200 rounded-full mr-3"></div>
+              <div>
+                <h4 className="font-semibold text-sm">Emily Rodriguez</h4>
+                <p className="text-gray-500 text-xs">Chicago</p>
+              </div>
+            </div>
           </div>
 
-          <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 text-center hover:shadow-md transition-shadow">
-            <div className="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
-              <span className="text-2xl">🚚</span>
+          <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+            <div className="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center mb-4">
+              <span className="text-2xl">⭐</span>
             </div>
-            <h4 className="font-semibold mb-2">Moving Tips</h4>
-            <p className="text-gray-600 text-sm">Smooth relocation guide</p>
+            <p className="text-gray-600 text-sm mb-4 italic">
+              "Highly recommended! The platform is user-friendly and the support
+              team is fantastic."
+            </p>
+            <div className="flex items-center">
+              <div className="w-8 h-8 bg-gray-200 rounded-full mr-3"></div>
+              <div>
+                <h4 className="font-semibold text-sm">David Thompson</h4>
+                <p className="text-gray-500 text-xs">Miami</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>

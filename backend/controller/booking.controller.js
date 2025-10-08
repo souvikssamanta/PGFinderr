@@ -10,12 +10,10 @@ try {
   if(!listing){
     return res.status(404).json({message:"Listing not found"})
   }
-if(new Date(checkIn)>=new Date(checkOut)){
+if(new Date(checkIn)>new Date(checkOut)){
   return res.status(400).json({message:"Check-out date must be after check-in date"})
 }
-// if(listing.isBooked){
-//   return res.status(400).json({message:"Listing is already booked"})
-// }
+
 const booking=await Booking.create({
   listing:id,
   host:listing.host,
@@ -26,6 +24,7 @@ const booking=await Booking.create({
   image:listing.image1,
   title:listing.title,
   landmark:listing.landmark,
+  category:listing.category,
   city:listing.city,
   isBooked:listing.isBooked,
   ratings:listing.ratings,

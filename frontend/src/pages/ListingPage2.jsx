@@ -34,23 +34,26 @@ const ListingPage2 = () => {
       description: "Paying Guest accommodation",
       color: "bg-green-100 text-green-700 border-green-200",
     },
-    
+
     {
       name: "Flat",
       icon: Building,
       description: "Independent apartment or flat",
       color: "bg-purple-100 text-purple-700 border-purple-200",
     },
-    
-    
-    
+
     {
       name: "Mess",
       icon: Utensils,
       description: "Food service with accommodation",
       color: "bg-red-100 text-red-700 border-red-200",
     },
-    
+    {
+      name: "Hotel",
+      icon: Utensils,
+      description: "Hotel with food and stay",
+      color: "bg-blue-100 text-blue-700 border-red-200",
+    },
   ];
 
   return (

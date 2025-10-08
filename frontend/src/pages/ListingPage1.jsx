@@ -245,7 +245,7 @@ const ListingPage1 = () => {
                 <div className="space-y-2">
                   <Label className="text-gray-700 font-medium flex items-center">
                     <DollarSign className="mr-2 h-4 w-4 text-green-600" />
-                    Monthly Rent (₹)
+                    Monthly Rent or Per night Rent (₹)
                   </Label>
                   <div className="relative">
                     <span className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500">

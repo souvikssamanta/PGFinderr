@@ -36,7 +36,7 @@ const Success = () => {
 
         <div className="flex justify-center">
           <Link
-            to="/"
+            to="/home"
             className="inline-flex items-center gap-2 px-5 py-2.5 bg-green-500 text-white rounded-lg hover:bg-green-600 transition-colors"
           >
             <FaHome /> Return to Home

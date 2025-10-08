@@ -44,7 +44,7 @@ const FailurePage = () => {
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <button
               className="flex items-center justify-center gap-2 px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition"
-              onClick={() => (window.location.href = "/")}
+              onClick={() => (window.location.href = "/home")}
             >
               <HomeIcon className="h-4 w-4" />
               Go to Home

@@ -12,6 +12,9 @@ const bookingSchema = new mongoose.Schema({
         title: {
         type: String,
     },
+    category: {
+        type: String,
+    },
     landmark: {
         type: String,
     },

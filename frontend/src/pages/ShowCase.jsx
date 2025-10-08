@@ -27,6 +27,7 @@ const ShowCase = () => {
         (propertyType === "PG" && item.title?.toLowerCase().includes("pg")) ||
         (propertyType === "Flat" &&
           item.title?.toLowerCase().includes("flat")) ||
+        (propertyType === "Hotel" && item.title?.toLowerCase().includes("hotel")) ||
         (propertyType === "Mess" && item.title?.toLowerCase().includes("mess"));
 
       const rentMatch = item.rent <= maxRent;
@@ -43,6 +44,8 @@ const ShowCase = () => {
         return <Home className="w-4 h-4" />;
       case "Mess":
         return <Utensils className="w-4 h-4" />;
+      case "Hotel":
+        return <Building className="w-4 h-4" />;
       default:
         return <Building className="w-4 h-4" />;
     }
@@ -80,7 +83,7 @@ const ShowCase = () => {
                 Property Type
               </label>
               <div className="flex flex-wrap gap-2">
-                {["All Types", "PG", "Flat", "Mess"].map((type) => (
+                {["All Types","PG","Flat","Mess","Hotel"].map((type) => (
                   <button
                     key={type}
                     onClick={() => setPropertyType(type)}

@@ -121,7 +121,7 @@ const InfiniteOfferCards = () => {
   }, [currentIndex]);
 
   return (
-    <div className="bg-gray-100 py-8 px-6 sm:px-2">
+    <div className="bg-gray-100 py-8 ">
       <div className="max-w-8xl mx-auto">
         <h2 className="text-2xl sm:text-3xl font-bold text-black text-center mb-4">
           <Flame className="inline-block animate-bounce size-6 sm:size-8 text-orange-600 mr-2" />

@@ -3,7 +3,7 @@ import { Home, Phone, Mail, MapPin, Facebook, Instagram, Twitter } from "lucide-
 const FooterCard = () => {
   return (
     <div>
-       <footer className="py-12 px-10 max-w-6xl mx-auto bg-white mb-4  mt-10">
+       <footer  className="py-12 px-10 max-w-6xl mx-auto bg-white mb-4  mt-10">
               <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
                 <div>
                   <div className="flex items-center space-x-2 mb-4">

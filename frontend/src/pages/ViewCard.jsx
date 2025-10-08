@@ -35,7 +35,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 
 const ViewCard = () => {
-  const [popup, setPopup] = useState(false);
+  
   const [loading, setLoading] = useState(false);
   const [book, setBook] = useState(false);
   const [activeImage, setActiveImage] = useState(0);
@@ -104,8 +104,8 @@ const ViewCard = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-white to-green-50 py-8">
-      <div className="max-w-6xl mx-auto px-4">
+    <div className="min-h-screen bg-gradient-to-br from-amber-50 to-white py-8 flex items-center justify-center">
+      <div className={`max-w-6xl mx-auto px-4  ${book? "opacity-0 hidden" :"opacity-full block"} transition-all duration-500`}>
         {/* Back Button */}
         <Button
           variant="ghost"
@@ -233,7 +233,7 @@ const ViewCard = () => {
                   <span className="text-2xl font-bold text-green-700">
                     ₹{cardDetails?.rent?.toLocaleString()}
                   </span>
-                  <span className="text-gray-600 mb-1">/ month</span>
+                  <span className="text-gray-600 mb-1">/{cardDetails.category==="Hotel"?"Night":"Month"}</span>
                 </div>
                 <p className="text-sm text-gray-600">
                   Inclusive of all maintenance charges
@@ -279,6 +279,7 @@ const ViewCard = () => {
               {/* Action Buttons */}
               <div className="flex flex-col sm:flex-row gap-3 pt-4">
                 <Button
+                  disabled={cardDetails.isBooked}
                   onClick={() => setBook(true)}
                   className="flex-1 bg-green-600 hover:bg-green-700 h-12 text-lg"
                 >
@@ -327,15 +328,9 @@ const ViewCard = () => {
         )}
       </div>
 
-      {/* Popup Modals */}
-      {popup && (
-        <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4">
-          <EditCard cardDetails={cardDetails} setPopup={setPopup} />
-        </div>
-      )}
 
       {book && (
-        <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+        <div className="absolute w-full  h-full backdrop-blur-sm z-50 flex justify-center items-center ">
           <Booking cardDetails={cardDetails} setBook={setBook} />
         </div>
       )}

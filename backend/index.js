@@ -17,7 +17,8 @@ app.use(express.json());
 app.use(cookieParser())
 app.use(express.urlencoded({extended:true}))
 app.use(cors({
-    origin:"https://pgfinderr.onrender.com",
+    // origin:"https://pgfinderr.onrender.com",
+    origin:"http://localhost:5173",
     methods:["GET","POST","PUT","DELETE"],
     credentials:true
 }))

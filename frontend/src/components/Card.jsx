@@ -114,8 +114,8 @@ const Card = ({
           <div className="flex flex-col">
             <span className="text-xs text-gray-500">Starting from</span>
             <span className="text-xl font-bold text-green-700">
-              ₹{rent || "8,000"}
-              <span className="text-sm font-normal text-gray-600">/month</span>
+              ₹{rent || "8,000"}/
+              <span className="text-sm font-normal text-gray-600">{category==="Hotel"?"night":"month"}</span>
             </span>
           </div>
 

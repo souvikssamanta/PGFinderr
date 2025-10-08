@@ -9,7 +9,7 @@ import UserContext from './context/UserContext.jsx'
 import ListingContext from './context/ListingContext.jsx'
 import MyListContext from './context/MyListContext.jsx'
 import BookingContext from './context/BookingContext.jsx'
-
+import { ChatbotProvider, useChatbot } from "./context/ChatbotContext";
 createRoot(document.getElementById("root")).render(
   <BrowserRouter>
     <AuthContext>
@@ -17,9 +17,11 @@ createRoot(document.getElementById("root")).render(
         <MyListContext>
           <UserContext>
             <Toaster />
-           <BookingContext>
-            <App />
-           </BookingContext>
+            <BookingContext>
+              <ChatbotProvider>
+                <App/>
+              </ChatbotProvider>
+            </BookingContext>
           </UserContext>
         </MyListContext>
       </ListingContext>

@@ -138,7 +138,7 @@ export const Card2 = ({
             <span className="text-xs text-gray-500">Starting from</span>
             <span className="text-xl font-bold text-green-700">
               ₹{rent || "8,000"}
-              <span className="text-sm font-normal text-gray-600">/month</span>
+              <span className="text-sm font-normal text-gray-600">/{category==="Hotel"?"night":"month"}</span>
             </span>
           </div>
 

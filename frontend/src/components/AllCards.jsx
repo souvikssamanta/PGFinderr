@@ -115,6 +115,7 @@ const AllCards = ({ listingData }) => {
                       description={item.description}
                       rent={item.rent}
                       landmark={item.landmark}
+                      category={item.category}
                       city={item.city}
                       ratings={item.ratings}
                       isbooked={item.isBooked}

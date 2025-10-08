@@ -2,11 +2,14 @@ import paymentModel from "../models/payment.model.js";
 import razorpay from "razorpay";
 import crypto from "crypto";
 import Booking from "../models/booking.model.js";
+import dotenv from "dotenv";
+dotenv.config(); 
+
 //intialize razorpay
 console.log(process.env.RAZORPAY_KEY_ID,process.env.RAZORPAY_KEY_SECRET)
 const razorpayInstance = new razorpay({
-  key_id:"rzp_test_wivByQXLsLz38L",
-  key_secret:"c6FPpqzzCLbMdEDtiatFdUeb",
+  key_id:process.env.RAZORPAY_KEY_ID,
+  key_secret:process.env.RAZORPAY_KEY_SECRET,
 });
 let Id;
 export const newpayment = async (req, res) => {
@@ -23,9 +26,6 @@ export const newpayment = async (req, res) => {
     const newOrder = new paymentModel(orderData);
     await newOrder.save();
 
-    // const paymentMode = await rideModel.findByIdAndUpdate(rideId, {
-    //   paymentType: "online",
-    // });
 
     const options = {
       amount: Number(amount) * 100, // ensure integer paise
@@ -52,8 +52,7 @@ export const verification = async (req, res) => {
     .createHmac("sha256", process.env.RAZORPAY_KEY_SECRET)
     .update(body.toString())
     .digest("hex");
-  console.log("expectedSignature", expectedSignature);
-  console.log("razorpay_signature", razorpay_signature);
+  
   const isAuthentic = razorpay_signature === expectedSignature;
 
   if (isAuthentic) {
