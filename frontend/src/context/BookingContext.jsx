@@ -54,13 +54,15 @@ if(result.status==201){
 }
 const cancelBooking=async(id)=>{
   try {
-    const result=await axios.post(serverUrl+`/api/booking/cancel/${id}`,{
+    const result=await axios.post(serverUrl+`/api/booking/cancel/${id}`,{},
+      {
       headers:
-      {Authorization:`Bearer ${localStorage.getItem("token")}`}
-    })
-    
+      {authorization:`Bearer ${localStorage.getItem("token")}`}
+    }
+  )
+   await getCurrentUser() 
     if(result.status==200){
-      toast.success("Booking cancelled")
+      toast.success("Booking cancelled successfully")
       navigate("/mybookings")
     }
   } catch (error) {
@@ -68,16 +70,6 @@ const cancelBooking=async(id)=>{
     toast.error("Booking cancellation failed")
   }
     }
-
-
-
-
-
-
-
-
-
-
 
 
 const value={

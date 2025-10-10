@@ -9,7 +9,7 @@ const isAuth = (req, res, next) => {
         }
         const verifyedToken=jwt.verify(token,process.env.JWT_SECRET);
         if(!verifyedToken){
-          return  res.status(401).json({message:"Unauthorized"})
+          return  res.status(401).json({message:"Invalid Credentials"})
         }
       
 

@@ -1,6 +1,5 @@
 
-
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { userDataContext } from "../context/UserContext";
 import
 {
@@ -21,6 +20,10 @@ import { useNavigate } from "react-router-dom";
 import { bookingDataContext } from "@/context/BookingContext";
 
 const MyBooking = () => {
+  const{getCurrentUser}=useContext(userDataContext)
+  useEffect(()=>{
+    getCurrentUser()
+  },[])
   const { userData } = useContext(userDataContext);
   const navigate = useNavigate();
 

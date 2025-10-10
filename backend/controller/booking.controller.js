@@ -44,10 +44,6 @@ res.status(201).json({message:"Booking created successfully",booking})
     return res.status(500).json({message:"Internal server error",error: error.message})
 }
 
-
-
-
-
 }
 
 export const cancelBooking=async(req,res)=>{
