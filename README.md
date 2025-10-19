@@ -1,4 +1,6 @@
-
+<p align="center">
+  <img src="https://raw.githubusercontent.com/souvikssamanta/PGFinderr/main/assets/home.jpeg" alt="Souvik Portfolio Banner" width="100%" />
+</p>
 
 <h1 align="center">🏠 PGFinderr — Smart PG, Hotel & Flat Booking Platform</h1>
 
@@ -65,10 +67,7 @@ The project showcases a **complete MERN stack workflow** — from backend REST A
 
 Follow these steps to set up **PGFinderr** locally 👇
 
-### 1️⃣ Clone the Repository
 
-git clone https://github.com/your-username/pgfinderr.git
-cd pgfinderr
 ###
 4️⃣ Open in Browser
 
